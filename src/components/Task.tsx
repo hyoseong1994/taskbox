@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { ITask } from "../model/task";
+import { ITask } from "../types/task";
 
 interface ITaskProps {
   task: ITask;
