@@ -25,7 +25,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "init-msw": "msw init public/"
+    "init-msw": "msw init public/",
+    "test-storybook": "test-storybook"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
@@ -37,6 +38,7 @@
     "@storybook/react": "^8.6.11",
     "@storybook/react-vite": "^8.6.11",
     "@storybook/test": "^8.6.11",
+    "@storybook/test-runner": "^0.22.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -61,5 +63,10 @@
       "plugin:storybook/recommended"
     ]
   },
-  "packageManager": "yarn@4.5.0"
+  "packageManager": "yarn@4.5.0",
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
 }
