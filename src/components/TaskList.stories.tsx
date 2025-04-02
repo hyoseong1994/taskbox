@@ -22,7 +22,6 @@ interface MockstoreProps {
   children: ReactNode;
 }
 
-// A super-simple mock of the state of the store
 export const MockedState = {
   tasks: [
     { ...TaskStories.Default.args.task, id: "1", title: "Task 1" },
@@ -36,7 +35,6 @@ export const MockedState = {
   error: null,
 };
 
-// A super-simple mock of a redux store
 const Mockstore: React.FC<MockstoreProps> = ({ taskboxState, children }) => (
   <Provider
     store={configureStore({

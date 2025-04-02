@@ -6,7 +6,6 @@ import { updateTaskState } from "../lib/store";
 import { RootState } from "../lib/store";
 
 export default function TaskList() {
-  // We're retrieving our state from the store
   const tasks = useSelector((state: RootState) => {
     const tasksInOrder = [
       ...state.taskbox.tasks.filter((t) => t.state === "TASK_PINNED"),
@@ -23,11 +22,9 @@ export default function TaskList() {
   const dispatch = useDispatch();
 
   const pinTask = (value: string) => {
-    // We're dispatching the Pinned event back to our store
     dispatch(updateTaskState({ id: value, newTaskState: "TASK_PINNED" }));
   };
   const archiveTask = (value: string) => {
-    // We're dispatching the Archive event back to our store
     dispatch(updateTaskState({ id: value, newTaskState: "TASK_ARCHIVED" }));
   };
   const LoadingRow = (
