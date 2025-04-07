@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { ITask } from "../types/task";
 
 interface ITaskProps {
@@ -53,12 +52,3 @@ export default function Task({
     </div>
   );
 }
-Task.propTypes = {
-  task: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired,
-  }),
-  onArchiveTask: PropTypes.func,
-  onPinTask: PropTypes.func,
-};
