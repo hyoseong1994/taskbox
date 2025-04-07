@@ -5,7 +5,6 @@ interface ITaskProps {
   onArchiveTask: (id: string) => void;
   onPinTask: (id: string) => void;
 }
-
 export default function Task({
   task: { id, title, state },
   onArchiveTask,
@@ -36,8 +35,10 @@ export default function Task({
           name="title"
           id={`title-${id}`}
           placeholder="Input title"
+          style={{ backgroundColor: "red" }}
         />
       </label>
+
       {state !== "TASK_ARCHIVED" && (
         <button
           className="pin-button"
